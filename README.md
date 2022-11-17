@@ -1,2 +1,2 @@
 # rock_paper_scissors
-Rock Paper Scissors game only through console
+This is a game of rock paper scissors that plays solely through the console. It will display my knowledge of integrating a javascript into an html file, as well as proficiency in functions, function scopes, and creating usable code.
