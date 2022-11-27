@@ -21,6 +21,8 @@ const computerFighter = document.querySelector('#computer-fighter');
 const playerScoreText = document.querySelector('#player-score');
 const computerScoreText = document.querySelector('#computer-score');
 const rules = document.querySelector('.rules');
+const btn = document.querySelectorAll('.btn');
+const restart = document.querySelector('.restart');
 
 rocks.addEventListener('click', () => {
     yourFighter.textContent = 'Your Fighter: Rock';
@@ -50,6 +52,10 @@ spocks.addEventListener('click', () => {
     yourFighter.textContent = 'Your Fighter: Spock';
     playerSelection = 'SPOCK';
     game();
+});
+
+restart.addEventListener('click', () => {
+    window.location.reload();
 });
 
 function playRound(playerSelection, computerSelection) {
@@ -165,23 +171,33 @@ function playRound(playerSelection, computerSelection) {
     }
 };
 
+function disableButtons() {
+    btn.forEach(elem => {
+        elem.disabled = true
+    })
+};
+
 function end() {
-    if (playerScore > computerScore) {
-        alert("YOU BEAT THE COMPUTER!");
-    } else if (playerScore < computerScore) {
-        alert("Damn...AI taking over the world for real");
+    if (playerScore === 5) {
+        winLose.textContent = ("YOU BEAT THE COMPUTER!");
+        disableButtons();
+    } else if (computerScore === 5) {
+        winLose.textContent = ("Damn...AI taking over the world for real");
+        disableButtons();
+    } else if (playerScore === 5 && computerScore === 5) {
+        winLose.textContent = ("Tie Game");
+        disableButtons();
     } else {
-        alert("Tie Game")
+        return;
     }
 };
 
-
- function game() {
+function game() {
     let computerSelection = getComputerChoice[Math.floor(Math.random() * getComputerChoice.length)];
     computerFighter.textContent = `${computerSelection}`;
     playRound;
     winLose.textContent = (playRound(playerSelection, computerSelection));
     playerScoreText.textContent = `Your Score: ${playerScore}`;
-    computerScoreText.textContent = `Computer Score: ${computerScore}`; 
+    computerScoreText.textContent = `Computer Score: ${computerScore}`;
     end();
 };
