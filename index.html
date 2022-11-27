@@ -5,8 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+    <header>
+        <h1 class = "title">Rock Paper Scissors Lizard Spock</h1>
+    </header>
+    <game>
+        <div class = "results">
+            <h2 class = "win-lose">Choose Your Fighter!</h2>
+            <h3 class = "rules">First to Five Wins Takes The Crown</h3>
+            <div class = "user-vs-computer">
+                <div class = "user">
+                    <h4 class = "fighter" id = "your-fighter">Your Fighter:</h4>
+                    <h4 class = "score" id = "player-score">Your Score:</h4>
+                </div>
+                <div class = "computer">
+                    <h4 class = "fighter" id = "computer-fighter">Computer Fighter:</h4>
+                    <h4 class = "score" id = "computer-score">Computer Score:</h4>
+                </div>
+            </div>
+        </div>
+        <button class = "btn" id = "rock">Rock</button>
+        <button class = "btn" id = "paper">Paper</button>
+        <button class = "btn" id = "scissors">Scissors</button>
+        <button class = "btn" id = "lizard">Lizard</button>
+        <button class = "btn" id = "spock">Spock</button>
+    </game>
     <script src ="javascript.js"></script>
 </body>
 </html>
