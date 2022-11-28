@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    background-color: #3A3560;
+    color: #F0F4F7;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(90deg, #D2DFFF 50%, #FFCDEA 50%);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #3A3560;
+    color: #F0F4F7;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-vs-computer {
+    display: flex;
+    gap: 150px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.restart-div {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.instructions-img {
+    height: 400px;
+}
